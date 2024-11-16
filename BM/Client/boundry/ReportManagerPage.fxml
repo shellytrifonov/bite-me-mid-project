@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Region?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ReportController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Report Management" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <VBox spacing="15" alignment="CENTER" maxWidth="300">
+        <Button fx:id="incomeReportButton" text="Income Report" onAction="#handleIncomeReport"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+        <Button fx:id="ordersReportButton" text="Orders Report" onAction="#handleOrdersReport"
+                style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+        <Button fx:id="performanceReportButton" text="Performance Report" onAction="#handlePerformanceReport"
+                style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+        <Button fx:id="quarterlyReportButton" text="Quarter Report" onAction="#handleQuarterlyReport"
+                style="-fx-background-color: #9C27B0; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+    </VBox>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <Button fx:id="backButton" text="Back" onAction="#handleBack"
+            style="-fx-background-color: #FF5722; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+
+</VBox>

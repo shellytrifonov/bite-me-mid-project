@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ManagerController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Manager Page" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <VBox spacing="15" alignment="CENTER" maxWidth="300">
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="manageReportButton" text="Report Management" onAction="#handleManageReportButton"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+        <Button fx:id="newRegisterButton" text=" New Customer Registration" onAction="#handleNewRegisterButton"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+    </HBox>
+
+    <Region VBox.vgrow="ALWAYS"/>
+
+    <Button fx:id="logoutButton" text="Logout" onAction="#handleLogoutButton"
+            style="-fx-background-color: #FF0000; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+</VBox>

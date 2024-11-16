@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.OrderController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Button fx:id="backButton" text="Back" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5;" AnchorPane.topAnchor="10" AnchorPane.rightAnchor="10"/>
+    
+    <Label text="Bite Me" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+    <Label text="Order Page" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <VBox spacing="10" alignment="CENTER" maxWidth="400">
+        <ComboBox fx:id="restaurantComboBox" promptText="Select Restaurant" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <HBox spacing="10">
+            <ComboBox fx:id="mainComboBox" promptText="Select Main" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="mainGrillLevelComboBox" promptText="Grill Level" maxWidth="120" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="mainQuantityComboBox" promptText="Qty" maxWidth="80" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <ComboBox fx:id="appetizerComboBox" promptText="Select Appetizer" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="appetizerQuantityComboBox" promptText="Qty" maxWidth="80" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <ComboBox fx:id="dessertComboBox" promptText="Select Dessert" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="dessertQuantityComboBox" promptText="Qty" maxWidth="80" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <ComboBox fx:id="saladComboBox" promptText="Select Salad" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="saladSizeComboBox" promptText="Size" maxWidth="100" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="saladQuantityComboBox" promptText="Qty" maxWidth="80" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <HBox spacing="10">
+            <ComboBox fx:id="drinkComboBox" promptText="Select Drink" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="drinkSizeComboBox" promptText="Size" maxWidth="100" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="drinkQuantityComboBox" promptText="Qty" maxWidth="80" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <TextArea fx:id="specialInstructionsArea" promptText="Special Instructions" maxWidth="Infinity" maxHeight="100" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        <ComboBox fx:id="deliveryTypeComboBox" promptText="Select Delivery Type" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        <CheckBox fx:id="robotDeliveryCheckBox" text="Robot Delivery" style="-fx-font-size: 14;"/>
+
+        <VBox spacing="5" style="-fx-background-color: #FFF0D4; -fx-padding: 10; -fx-background-radius: 5;">
+            <Label text="Delivery Information" style="-fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+            <TextField fx:id="addressField" promptText="Delivery Address" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <TextField fx:id="nameField" promptText="Recipient Name" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <TextField fx:id="phoneField" promptText="Recipient Phone" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <TextField fx:id="numberOfOrderersField" promptText="Number of Orderers (for Shared Delivery)" maxWidth="Infinity" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </VBox>
+
+        <HBox spacing="10">
+            <DatePicker fx:id="orderDatePicker" promptText="Select Date" maxWidth="Infinity" HBox.hgrow="ALWAYS" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+            <ComboBox fx:id="orderTimePicker" promptText="Select Time" maxWidth="150" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+        </HBox>
+
+        <Label fx:id="totalPriceLabel" text="Total Price: $0.00" style="-fx-font-size: 18; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+        <Button fx:id="placeOrderButton" text="Place Order" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16; -fx-background-radius: 5; -fx-min-width: 200;"/>
+    </VBox>
+</VBox>

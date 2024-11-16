@@ -1,0 +1,19 @@
+# Visual Studio files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+Debug/
+Release/
+x64/
+
+# Database credentials
+appsettings.json
+Web.config
+App.config
+
+# Packages
+packages/
+*.nupkg

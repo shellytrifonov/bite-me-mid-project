@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.OrderViewController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Bite Me" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <Label text="View Orders" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <StackPane VBox.vgrow="ALWAYS">
+        <ListView fx:id="ordersListView" style="-fx-background-color: #FFFFFF; -fx-background-radius: 5;">
+            <VBox.margin>
+                <Insets top="10" bottom="10"/>
+            </VBox.margin>
+        </ListView>
+        <Label fx:id="noOrdersLabel" text="" visible="false" style="-fx-font-size: 16px; -fx-text-fill: #555;"/>
+    </StackPane>
+
+    <!-- New Confirm Receive Button -->
+    <Button fx:id="confirmReceiveButton" text="Confirm Receive"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 150;">
+        <VBox.margin>
+            <Insets top="10"/>
+        </VBox.margin>
+    </Button>
+
+    <!-- Existing Back Button -->
+    <Button fx:id="backButton" text="Back"
+            style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 150;">
+        <VBox.margin>
+            <Insets top="10"/>
+        </VBox.margin>
+    </Button>
+
+</VBox>

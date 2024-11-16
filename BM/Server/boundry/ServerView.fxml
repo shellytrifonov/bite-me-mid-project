@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="10" alignment="TOP_CENTER" style="-fx-background-color: #f0f0f0;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.ServerController">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <Label text="Bite Me Server" style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+	<Label text="Database: BiteMe" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: #666666;"/>
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Port:" GridPane.columnIndex="0" GridPane.rowIndex="0" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="portTextField" GridPane.columnIndex="1" GridPane.rowIndex="0" prefWidth="200"/>
+        
+        <Label text="DB Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" style="-fx-font-weight: bold;"/>
+        <TextField fx:id="dbUsernameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" prefWidth="200"/>
+        
+        <Label text="DB Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" style="-fx-font-weight: bold;"/>
+        <PasswordField fx:id="dbPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="200"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="startButton" text="Start Server" onAction="#handleStartServer" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <Button fx:id="stopButton" text="Stop Server" onAction="#handleStopServer" style="-fx-background-color: #f44336; -fx-text-fill: white;"/>
+    </HBox>
+
+    <TextArea fx:id="consoleTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS" style="-fx-font-family: 'Courier New';"/>
+    <ListView fx:id="connectedClientsListView" VBox.vgrow="ALWAYS"/>
+    
+
+</VBox>

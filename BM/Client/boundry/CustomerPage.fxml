@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.CustomerController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Bite Me" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <Label text="Customer Dashboard" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <VBox spacing="15" alignment="CENTER" maxWidth="300">
+        <Button fx:id="createOrderButton" text="Create New Order" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+        <Button fx:id="viewOrdersButton" text="View Orders" 
+                style="-fx-background-color: #008CBA; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 200;"/>
+    </VBox>
+
+    <Button fx:id="logoutButton" text="Logout" 
+            style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+
+</VBox>

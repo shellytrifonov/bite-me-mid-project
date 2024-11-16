@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.RegisterCustomerController">
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Label text="New Customer Registration" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <GridPane vgap="15" hgap="15" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="100" prefWidth="150" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="200" prefWidth="250" />
+        </columnConstraints>
+
+        <Label text="First Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="firstnameField" promptText="Enter first name" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <TextField fx:id="lastnameField" promptText="Enter last name" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <Label text="ID:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <TextField fx:id="idField" promptText="Enter ID" GridPane.rowIndex="2" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <Label text="Phone Number:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+        <TextField fx:id="phoneField" promptText="Enter phone number" GridPane.rowIndex="3" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <Label text="Email:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+        <TextField fx:id="emailField" promptText="Enter email" GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+
+        <Label text="User Type:" GridPane.rowIndex="6" GridPane.columnIndex="0" />
+        <ComboBox fx:id="userTypeComboBox" promptText="Select user type" GridPane.rowIndex="6" GridPane.columnIndex="1" style="-fx-font-size: 14; -fx-background-radius: 5;"/>
+    </GridPane>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="registerButton" text="Register" onAction="#handleRegister"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+        <Button fx:id="backButton" text="Back" onAction="#handleBack"
+                style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+    </HBox>
+
+    <Label fx:id="errorLabel" textFill="RED" wrapText="true" maxWidth="400" alignment="CENTER"/>
+</VBox>

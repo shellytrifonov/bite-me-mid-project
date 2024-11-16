@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20" style="-fx-background-color: #FFE4B5;" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.MenuUpdateController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Bite Me" style="-fx-font-size: 36; -fx-font-weight: bold; -fx-text-fill: #8B4513;"/>
+
+    <Label text="Menu Update" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+    <VBox spacing="15" alignment="CENTER" maxWidth="300">
+        <HBox spacing="10">
+            <Label text="Menu Item:" style="-fx-font-size: 14;"/>
+            <ComboBox fx:id="menuItemsComboBox" style="-fx-font-size: 14; -fx-background-radius: 5;" maxWidth="200"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Item ID:" style="-fx-font-size: 14;"/>
+            <TextField fx:id="itemIdField" style="-fx-font-size: 14; -fx-background-radius: 5;" editable="false" maxWidth="200"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Price:" style="-fx-font-size: 14;"/>
+            <TextField fx:id="priceField" style="-fx-font-size: 14; -fx-background-radius: 5;" maxWidth="200"/>
+        </HBox>
+        <HBox spacing="10">
+            <Label text="Quantity:" style="-fx-font-size: 14;"/>
+            <TextField fx:id="quantityField" style="-fx-font-size: 14; -fx-background-radius: 5;" maxWidth="200"/>
+        </HBox>
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button fx:id="updateButton" text="Update" 
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14; -fx-background-radius: 5; -fx-min-width: 100;"/>
+    </HBox>
+</VBox>
